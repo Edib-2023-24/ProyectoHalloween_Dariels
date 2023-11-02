@@ -8,12 +8,18 @@
 
 /* Tipografía */
 @font-face {
-  font-family: "";
-  src: url("") format("woff2"), url("") format("woff");
+  font-family: "Bones";
+  src: url("../font/xBONES.woff2") format("woff2"),
+    url("../font/xBONES.woff") format("woff");
 }
 
 /* ******************************** */
 
 /* Colores */
-
+:root {
+  --color-gris: #a0a2a1;
+  --color-morado: #7f2eb3;
+  --color-naranja: #ff8814;
+  --color-naranja-claro: #f9af1f;
+}
 /* ******************************** */
