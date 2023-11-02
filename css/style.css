@@ -17,9 +17,59 @@
 
 /* Colores */
 :root {
+  --color-amarillo: #ffdd00;
   --color-gris: #a0a2a1;
   --color-morado: #7f2eb3;
   --color-naranja: #ff8814;
   --color-naranja-claro: #f9af1f;
 }
 /* ******************************** */
+html {
+  font-family: "Bones";
+  font-size: 16px;
+  color: var(--color-naranja);
+}
+
+body {
+  width: clamp(430px, 100wv);
+  height: clamp(932px, 100hv);
+  background: #111;
+
+  & main {
+    height: 95vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    /* Iconos de telarañas en las esquinas */
+    background: 
+      url(../svg/luna.svg) no-repeat right 10% top 10%,
+      url(../svg/telaraña1.svg) no-repeat left bottom,
+      url(../svg/telaraña2.svg) no-repeat right bottom,
+      url(../svg/telaraña3.svg) no-repeat right top,
+      url(../svg/telaraña4.svg) no-repeat left top,
+      url(../svg/fantasma1.svg) no-repeat right bottom 20%,
+      url(../svg/fantasma2.svg) no-repeat left top 20%,
+      url(../svg/mano.svg) no-repeat center bottom -3%;
+      
+
+    & .contador {
+      line-height: 3.25rem;
+      font-size: 6rem;
+      padding: 40px 0;
+      text-align: center;
+      font-size: 2.5rem;
+    }
+
+    & .main__pago {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      & .main__pago-img {
+        background: var(--color-amarillo, #fd0);
+        width: 100%;
+      }
+    }
+  }
+}
