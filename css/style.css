@@ -43,8 +43,7 @@ body {
     flex-direction: column;
 
     /* Iconos de telarañas en las esquinas */
-    background: 
-      url(../svg/luna.svg) no-repeat right 10% top 10%,
+    background: url(../svg/luna.svg) no-repeat right 10% top 10%,
       url(../svg/telaraña1.svg) no-repeat left bottom,
       url(../svg/telaraña2.svg) no-repeat right bottom,
       url(../svg/telaraña3.svg) no-repeat right top,
@@ -52,7 +51,6 @@ body {
       url(../svg/fantasma1.svg) no-repeat right bottom 20%,
       url(../svg/fantasma2.svg) no-repeat left top 20%,
       url(../svg/mano.svg) no-repeat center bottom -3%;
-      
 
     & .contador {
       line-height: 3.25rem;
@@ -66,9 +64,13 @@ body {
       position: fixed;
       bottom: 0;
       width: 100%;
+      background: var(--color-amarillo);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
       & .main__pago-img {
-        background: var(--color-amarillo, #fd0);
-        width: 100%;
+        background: var(--color-amarillo);
       }
     }
   }
