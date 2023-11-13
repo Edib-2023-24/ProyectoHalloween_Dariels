@@ -22,6 +22,8 @@
   --color-morado: #7f2eb3;
   --color-naranja: #ff8814;
   --color-naranja-claro: #f9af1f;
+
+  --sombra: 0px 5px 2px #7f2eb3;
 }
 /* ******************************** */
 html {
@@ -37,6 +39,7 @@ body {
 
   & main {
     height: 95vh;
+    text-shadow: var(--sombra);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -52,12 +55,18 @@ body {
       url(../svg/fantasma2.svg) no-repeat left top 20%,
       url(../svg/mano.svg) no-repeat center bottom -3%;
 
+    & h1 {
+      font-size: 50px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+
     & .contador {
-      line-height: 3.25rem;
-      font-size: 6rem;
       padding: 40px 0;
-      text-align: center;
+      text-align: right;
       font-size: 2.5rem;
+      line-height: 130%;
     }
 
     & .main__pago {
