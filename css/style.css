@@ -31,7 +31,6 @@ html {
   font-size: 16px;
   color: var(--color-naranja);
   user-select: none;
-  overflow: hidden;
 }
 
 body {
@@ -82,5 +81,15 @@ body {
         background: var(--color-amarillo);
       }
     }
+  }
+  .susto {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
   }
 }

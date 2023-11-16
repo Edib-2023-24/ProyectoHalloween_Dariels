@@ -37,9 +37,3 @@
     }
     // Actualiza el contador cada segundo
     setInterval(actualizarContador, 1000);
-
-    
-    
-    
-
-
