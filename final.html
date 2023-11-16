@@ -42,23 +42,26 @@
     <!-- Scripts a cargar antes de la renderización -->
     <script src="preloader.js"></script>
   </head>
-  <body>
+  <body class="final-page">
     <!-- Main (centro de la página, zona central) -->
       <main>
         <!-- section y article (posibilidades dentro de main) -->
-        <h1 id="fecha_actual" ></h1>
-        <section id="contador" class="contador"></section>
-
+        <h1 id="fecha_actual"></h1>
+  
         <article class="main__pago">
           <a href="#" class="main__pago-img">
-          <img src="svg/pago.svg" alt="Banner para mendigar dinero"></a>
+            <img src="svg/pago.svg" alt="Banner para mendigar dinero">
+          </a>
         </article>
-        <span data-tooltip="¿?" data-flow="top"> <a href="final.html" class="__a">X</a></span>
+
+        <article class="sms__final">
+          <h3>31 de 11 de XX  </h3>
+          <h2>¡Feliz Halloween!</h2>
+          <h3>00:00:00:00</h3>
+        </article>
       </main>
 
-      <img src="img/susto.png" class="susto" alt="Susto">
       <script src="js/script.js"></script>
-      <script src="js/susto.js"></script>
     </div>
   </body>
 </html>

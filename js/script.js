@@ -3,7 +3,7 @@
       // Obtén la fecha actual
       var ahora = new Date();
       // Fecha objetivo (puedes personalizarla)
-      let fechaObjetivo = new Date("2024-10-31T23:59:59");
+      let fechaObjetivo = new Date("2024-10-31T00:00:00");
       // Calcula la diferencia entre las fechas
       let diferencia = fechaObjetivo - ahora;
 

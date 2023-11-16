@@ -23,6 +23,7 @@
   --color-naranja: #ff8814;
   --color-naranja-claro: #f9af1f;
 
+  /* Efectos */
   --sombra: 0px 5px 2px #7f2eb3;
 }
 /* ******************************** */
@@ -31,8 +32,46 @@ html {
   font-size: 16px;
   color: var(--color-naranja);
   user-select: none;
+  overflow: hidden;
 }
 
+/* Atributos de final.html */
+body.final-page main {
+  justify-content: center;
+
+  /* Iconos de telarañas en las esquinas */
+  background: url(../svg/luna.svg) no-repeat right 10% top 15%,
+    url(../svg/telaraña3.svg) no-repeat right top,
+    url(../svg/telaraña4.svg) no-repeat left top,
+    url(../svg/fantasma2.svg) no-repeat left top 20%,
+    url(../svg/telaraña1.svg) no-repeat left bottom,
+    url(../svg/telaraña2.svg) no-repeat right bottom,
+    url(../svg/fantasma1.svg) no-repeat right bottom 30%,
+    url(../svg/esqueletos.svg) no-repeat center bottom 5%;
+
+  & .sms__final {
+    text-align: center;
+
+    & h2,
+    h3 {
+      color: var(--color-naranja, #ff8814);
+      font-style: normal;
+      font-weight: 400;
+      text-shadow: 0px 4px 4px #7f2eb3;
+    }
+  }
+
+  & .sms__final h2 {
+    text-align: center;
+    font-size: 50px;
+    line-height: 137.8%; /* 68.9px */
+  }
+  & .sms__final h3 {
+    font-size: 22px;
+  }
+}
+
+/* Atributos del index */
 body {
   width: clamp(430px, 100wv);
   height: clamp(932px, 100hv);
@@ -81,7 +120,118 @@ body {
         background: var(--color-amarillo);
       }
     }
+
+    & span > .__a {
+      text-decoration: none;
+      list-style: none;
+      font-size: 55px;
+      color: var(--color-naranja);
+    }
   }
+  [data-tooltip] {
+    position: relative;
+    cursor: pointer;
+  }
+  [data-tooltip]:before,
+  [data-tooltip]:after {
+    line-height: 1;
+    font-size: 0.9em;
+    pointer-events: none;
+    position: absolute;
+    box-sizing: border-box;
+    display: none;
+    opacity: 0;
+  }
+  [data-tooltip]:before {
+    content: "";
+    border: 5px solid transparent;
+    z-index: 100;
+  }
+  [data-tooltip]:after {
+    content: attr(data-tooltip);
+    text-align: center;
+    min-width: 3em;
+    max-width: 21em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 10px 11px;
+    border-radius: 6px;
+    background: #ff8814;
+    color: #ffffff;
+    z-index: 99;
+  }
+  [data-tooltip]:hover:before,
+  [data-tooltip]:hover:after {
+    display: block;
+    opacity: 1;
+  }
+  [data-tooltip]:not([data-flow])::before,
+  [data-tooltip][data-flow="top"]::before {
+    bottom: 100%;
+    border-bottom-width: 0;
+    border-top-color: #ff8814;
+  }
+  [data-tooltip]:not([data-flow])::after,
+  [data-tooltip][data-flow="top"]::after {
+    bottom: calc(100% + 5px);
+  }
+  [data-tooltip]:not([data-flow])::before,
+  [tooltip]:not([data-flow])::after,
+  [data-tooltip][data-flow="top"]::before,
+  [data-tooltip][data-flow="top"]::after {
+    left: 50%;
+    -webkit-transform: translate(-50%, -4px);
+    transform: translate(-50%, -4px);
+  }
+  [data-tooltip][data-flow="bottom"]::before {
+    top: 100%;
+    border-top-width: 0;
+    border-bottom-color: #ff8814;
+  }
+  [data-tooltip][data-flow="bottom"]::after {
+    top: calc(100% + 5px);
+  }
+  [data-tooltip][data-flow="bottom"]::before,
+  [data-tooltip][data-flow="bottom"]::after {
+    left: 50%;
+    -webkit-transform: translate(-50%, 8px);
+    transform: translate(-50%, 8px);
+  }
+  [data-tooltip][data-flow="left"]::before {
+    top: 50%;
+    border-right-width: 0;
+    border-left-color: #ff8814;
+    left: calc(0em - 5px);
+    -webkit-transform: translate(-8px, -50%);
+    transform: translate(-8px, -50%);
+  }
+  [data-tooltip][data-flow="left"]::after {
+    top: 50%;
+    right: calc(100% + 5px);
+    -webkit-transform: translate(-8px, -50%);
+    transform: translate(-8px, -50%);
+  }
+  [data-tooltip][data-flow="right"]::before {
+    top: 50%;
+    border-left-width: 0;
+    border-right-color: #ff8814;
+    right: calc(0em - 5px);
+    -webkit-transform: translate(8px, -50%);
+    transform: translate(8px, -50%);
+  }
+  [data-tooltip][data-flow="right"]::after {
+    top: 50%;
+    left: calc(100% + 5px);
+    -webkit-transform: translate(8px, -50%);
+    transform: translate(8px, -50%);
+  }
+  [data-tooltip=""]::after,
+  [data-tooltip=""]::before {
+    display: none !important;
+  }
+
+  /* Estilos para el susto */
   .susto {
     position: fixed;
     top: 50%;

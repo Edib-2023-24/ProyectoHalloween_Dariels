@@ -13,4 +13,4 @@ function mostrarSusto() {
   }, 1000);
 }
 // Establece el temporizador por primera vez
-let temporizador = setInterval(mostrarSusto, 5000);
+let temporizador = setInterval(mostrarSusto, 2000);
